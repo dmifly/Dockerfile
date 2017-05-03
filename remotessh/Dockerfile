@@ -7,7 +7,6 @@ RUN apk --no-cache add openssh \
 	&& ssh-keygen -A
 
 EXPOSE 22 4445 4446 4447 4448
+ENTRYPOINT   echo "root:$PASSWORD" | chpasswd ; /usr/sbin/sshd -D -e "$@"
 
-CMD echo root:$PASSWORD | chpasswd
-ENTRYPOINT /usr/sbin/sshd -D -e "$@"
 
