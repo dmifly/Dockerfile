@@ -8,7 +8,7 @@ RUN apk --no-cache add dnsmasq git \
 #	&& echo "addn-hosts=/root/hosts/hosts" >> /etc/dnsmasq.conf \
 	&& echo "user=root" >> /etc/dnsmasq.conf \
 	&& echo "hostsdir=/root/hosts" >> /etc/dnsmasq.conf  \
-	&& echo "port=53" >> /etc/dnsmasq.conf  \
+#	&& echo "port=53" >> /etc/dnsmasq.conf  \
 #	&& echo "no-resolv" >> /etc/dnsmasq.conf  \
 	&& echo "no-hosts" >> /etc/dnsmasq.conf  \
 	&& echo "resolv-file=/root/resolv.conf" >> /etc/dnsmasq.conf \
