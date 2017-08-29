@@ -2,8 +2,8 @@ FROM alpine
 
 WORKDIR /root
 RUN apk --no-cache add dnsmasq git \
-#	&& git clone https://git.coding.net/scaffrey/hosts.git \
-	&& git clone https://github.com/ider-zh/hosts.git \
+	&& git clone https://git.coding.net/scaffrey/hosts.git \
+#	&& git clone https://github.com/ider-zh/hosts.git \
 	&& echo "1	1	*	*	*	cd /root/hosts;git pull >>/root/log"\
 		>> /etc/crontabs/root \
 #	&& echo "addn-hosts=/root/hosts/hosts" >> /etc/dnsmasq.conf \
