@@ -14,6 +14,7 @@ RUN unzip -q -d /root /root/"$_XXNET_VERSION" \
 #	data/launcher/config.yaml 
 VOLUME /root/XX-Net-"$_XXNET_VERSION"/data/gae_proxy/
 COPY manual.ini data/gae_proxy/manual.ini
+COPY client.json data/x_tunnel/client.json
 EXPOSE 8087 8085 1080
 CMD ["/bin/bash","-c", "./start"]
 
