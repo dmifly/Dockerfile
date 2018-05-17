@@ -8,15 +8,21 @@ RUN mkdir -p /opt/phantomjs \
         && ln -s /opt/phantomjs/bin/phantomjs /usr/local/bin/phantomjs \
         && rm phantomjs.tar.bz2
 
+
 # install pyspider
 
-WORKDIR /root
-COPY requirements.txt requirements.txt
-RUN pip install --egg 'https://dev.mysql.com/get/Downloads/Connector-Python/mysql-connector-python-2.1.5.zip#md5=ce4a24cb1746c1c8f6189a97087f21c1' \
+RUN git clone https://github.com/binux/pyspider.git /opt/pyspider
+WORKDIR /opt/pyspider
+RUN pip install 'https://dev.mysql.com/get/Downloads/Connector-Python/mysql-connector-python-2.1.5.zip#md5=ce4a24cb1746c1c8f6189a97087f21c1' \
 	&& pip install --no-cache-dir -r requirements.txt \
-	&& pip install --no-cache-dir  pyspider
+	&& pip install -e .[all]
 
-VOLUME ["/root"]
+
+# isntall your package
+RUN pip install arrow bs4 pychrome
+
+
+VOLUME ["/opt/pyspider"]
 ENTRYPOINT ["pyspider"]
 
 EXPOSE 5000 23333 24444 25555
