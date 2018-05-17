@@ -19,7 +19,7 @@ RUN pip install 'https://dev.mysql.com/get/Downloads/Connector-Python/mysql-conn
 
 
 # isntall your package
-RUN pip install arrow bs4 pychrome
+RUN pip install arrow bs4 pychrome html5lib
 
 
 VOLUME ["/opt/pyspider"]
