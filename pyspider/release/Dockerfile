@@ -12,7 +12,7 @@ RUN mkdir -p /opt/phantomjs \
 
 WORKDIR /root
 COPY requirements.txt requirements.txt
-RUN pip install --egg 'https://dev.mysql.com/get/Downloads/Connector-Python/mysql-connector-python-2.1.5.zip#md5=ce4a24cb1746c1c8f6189a97087f21c1' \
+RUN pip install 'https://dev.mysql.com/get/Downloads/Connector-Python/mysql-connector-python-2.1.5.zip#md5=ce4a24cb1746c1c8f6189a97087f21c1' \
 	&& pip install --no-cache-dir -r requirements.txt \
 	&& pip install --no-cache-dir  pyspider
 
