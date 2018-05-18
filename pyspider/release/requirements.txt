@@ -26,3 +26,4 @@ tblib
 bs4
 arrow
 html5lib
+pychrome
