@@ -1,3 +1,4 @@
 {
-  "socks_host":"0.0.0.0"
+  "socks_host":"0.0.0.0",
+  "listen_ip": "0.0.0.0"
 }
