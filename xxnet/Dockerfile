@@ -1,4 +1,4 @@
-FROM jfloff/alpine-python:2.7-slim
+FROM jfloff/alpine-python:3.8-slim
 MAINTAINER ider "326737833@qq.com"
 
 ENV _XXNET_VERSION 4.5.3
