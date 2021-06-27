@@ -1,7 +1,7 @@
 FROM jfloff/alpine-python:2.7-slim
 MAINTAINER ider "326737833@qq.com"
 
-ENV _XXNET_VERSION 3.13.1
+ENV _XXNET_VERSION 4.5.3
 WORKDIR /root/XX-Net-"$_XXNET_VERSION"
 #ADD  "$_XXNET_VERSION" /root
 ADD  https://codeload.github.com/XX-net/XX-Net/zip/"$_XXNET_VERSION" /root
